@@ -121,7 +121,7 @@ function(req, res){
   res.render('stickershare');
 });
 
-
-app.listen( () => {
-  console.log('App listening on port 3000...');
+var server_port = process.env.PORT || 3000;
+app.listen(server_port, () => {
+  console.log('App listening on port: ' + server_port);
 });
