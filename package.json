@@ -29,6 +29,6 @@
     "passport-snapchat": "^1.0.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "CLIENT_ID=8af92967-e0d5-4118-b66e-4acc7e7c9580 CLIENT_SECRET=349cb190-8206-4114-96b2-e2616b5fc19d SESSION_SECRET=whatever node server.js"
   }
 }
