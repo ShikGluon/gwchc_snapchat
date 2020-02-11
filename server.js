@@ -21,7 +21,7 @@ var base_url = ('https' + process.env.HEROKU_APP_NAME + '.herokuapp.com') || 'ht
 passport.use(new SnapchatStrategy({
     clientID: config.CLIENT_ID || process.env.CLIENT_ID,
     clientSecret: config.CLIENT_SECRET || process.env.CLIENT_SECRET,
-    callbackURL: 'http://localhost:3000/login/snapchat/callback',
+    callbackURL: base_url + '/login/snapchat/callback',
     profileFields: ['id', 'displayName', 'bitmoji'],
     scope: ['user.display_name', 'user.bitmoji.avatar'],
     state: true,
