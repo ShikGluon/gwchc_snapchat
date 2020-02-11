@@ -17,6 +17,7 @@ try {
 // behalf, along with the user's profile.  The function must invoke `cb`
 // with a user object, which will be set at `req.user` in route handlers after
 // authorization.
+var base_url = ('https' + process.env.HEROKU_APP_NAME + '.herokuapp.com') || 'http://localhost:3000';
 passport.use(new SnapchatStrategy({
     clientID: config.CLIENT_ID || process.env.CLIENT_ID,
     clientSecret: config.CLIENT_SECRET || process.env.CLIENT_SECRET,
